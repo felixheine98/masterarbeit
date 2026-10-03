@@ -1,0 +1,18 @@
+# To acquire — lit-rq4
+
+No legal publisher/author-repository full text could be obtained for these sources on 2026-10-03. Most remain unread; Thangavel was previously read in a third-party-hosted copy, with pagination awaiting publisher verification. No new acquisition item was added in the continuation below.
+
+| bibkey | Title | DOI | Why it matters |
+|--------|-------|-----|----------------|
+| mijovic2016comparing | Comparing application layer protocols for the Internet of Things via experimentation (IEEE RTSI 2016, pp. 1–5) | 10.1109/RTSI.2016.7740559 | **Priority 1.** Năstase et al. (2017, p. 407) attribute "protocol efficiency" to reference [4]; the identity is now confirmed from their printed p. 412. Original numerator/denominator/layers remain unverified. Continuation retrieval: University of Bologna record https://cris.unibo.it/handle/11585/598271 visible in search, direct access HTTP 403; no legal full text obtained. Also requested by lit-rq1 and lit-related-work. |
+| yokotani2016comparison | Comparison with HTTP and MQTT on required network resources for IoT (IEEE ICCEREC 2016, pp. 1–6) | 10.1109/ICCEREC.2016.7814989 | **Priority 1.** Most-cited HTTP-vs-MQTT overhead comparison; the open-access journal version (sasaki2019performance) was read instead, but the conference paper is what other literature cites. |
+| amirkhanov2025evaluating | Evaluating HTTP, MQTT over TCP and MQTT over WEBSOCKET for digital twin applications (IJIRSS 8(1), 679–694) | 10.53894/ijirss.v8i1.4414 | **Priority 1.** Open access, but ijirss.com timed out from the agent machine — a normal browser download should work. Closest match to the thesis' protocol triple; check whether it reports bytes/overhead or only latency. Also requested by lit-rq1 and lit-related-work. |
+| mun2016assessment | An Assessment of Internet of Things Protocols for Resource-Constrained Applications (IEEE COMPSAC 2016, pp. 555–560) | 10.1109/COMPSAC.2016.51 | **Priority 2.** Compares IoT protocols incl. overhead on constrained hardware (per title/secondary descriptions; content not verified). |
+| thangavel2014performance | Performance evaluation of MQTT and CoAP via a common middleware (IEEE ISSNIP 2014, pp. 1–6) | 10.1109/ISSNIP.2014.6827678 | **Priority 2.** Read only in a copy hosted on a Clemson University course page (not stored). The publisher PDF is needed so that `lit-verifier` can confirm the page numbers (pp. 3–5) and quotes used in findings F6. Also requested by lit-rq1. |
+| skvorc2014performance | Performance evaluation of Websocket protocol for implementation of full-duplex web streams (MIPRO 2014, pp. 1003–1008) | 10.1109/MIPRO.2014.6859715 | **Priority 3.** WebSocket overhead relative to raw TCP (per title; content not verified); pre-2015. |
+| laaroussi2021performance | A Performance Analysis of the Security Communication in CoAP and MQTT (IEEE CCNC 2021, pp. 1–6) | 10.1109/CCNC49032.2021.9369565 | **Priority 3.** TLS/DTLS cost for MQTT/CoAP; may give handshake byte counts complementing seoane2021performance (content not verified). |
+| kaur2022implementation | Implementation and Comparison of MQTT, WebSocket, and HTTP Protocols for Smart Room IoT Application in Node-RED (Springer, pp. 165–193) | 10.1007/978-3-030-89554-9_8 | **Priority 3.** Same protocol triple as the thesis; unknown whether overhead is measured. Also requested by lit-rq1 and lit-related-work. |
+
+## Acquisition reconciliation — 2026-10-03
+
+`pimentel2012communicating` removed from the outstanding table: lit-rq1 recovered the complete nine-page full text (printed pp. 45–53) in `literature/pdfs/pimentel2012communicating.pdf` and read it. See RQ1 findings F10/F35. This updates availability; RQ4 has not independently extracted findings from this recovered copy.

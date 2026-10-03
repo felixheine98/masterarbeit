@@ -1,21 +1,22 @@
 # Sources already used in the thesis
 
-Status as of the export from claude.ai (2026-10-03). Identifiers are as recorded in earlier sessions; **not yet verified** — `lit-verifier` checks each one (existence, DOI, metadata, open-access PDF, page-level findings).
+Status as of the export from claude.ai (2026-10-03). Identifiers are as recorded in earlier sessions.
+**Verified by `lit-verifier` on 2026-10-03 (Task A; Task B updates incorporated)** — existence, identifier and metadata checked against Crossref / arXiv / Europe PMC / DataCite / publisher or repository page. ☑ = source exists and metadata are confirmed; it does **not** mean the source is suitable or correctly assigned — read the notes. Details: `literature/verification-report.md`, findings: `literature/findings/existing-sources.md`, BibTeX: `literature/bib/lit-verifier.bib`.
 
 ## RQ3 — Payload formats
-| Source (as recorded) | Identifier | Verified |
-|---|---|---|
-| Viswanathan, University of Pittsburgh | (thesis/report — exact title to be confirmed) | ☐ |
-| PMC article | PMC10224120 | ☐ |
-| Dizdarević et al. — survey of IoT communication protocols | arXiv:1804.01747 | ☐ |
-| ScienceDirect survey | PII S2352864822000347 | ☐ |
+| Source (as recorded) | Identifier | Verified | Resolved as (bibkey) | Notes / discrepancies |
+|---|---|---|---|---|
+| Viswanathan, University of Pittsburgh | (thesis/report — exact title to be confirmed) | ☑ (identity to be confirmed by Felix) | Viswanathan, A. (2017). *Analysis of Power Consumption of the MQTT Protocol*. Master's thesis, University of Pittsburgh. https://d-scholarship.pitt.edu/32399 (`viswanathan2017analysis`) | No identifier was recorded; matched by author + institution only (only fitting work found). **Topic mismatch:** MQTT power consumption on a Raspberry Pi (QoS, payload size, authentication) — not payload formats; fits RQ2. Not peer-reviewed (master's thesis). PDF not obtained (bot check) → to-acquire. |
+| PMC article | PMC10224120 | ☑ | Jara Ochoa et al. (2023). Comparative Analysis of Power Consumption between MQTT and HTTP Protocols in an IoT Platform … *Sensors, 23*(10), 4896. DOI 10.3390/s23104896 (`jaraochoa2023power`) | ID correct. **Topic mismatch:** power consumption MQTT vs HTTP on a NodeMCU — contains nothing on JSON/CBOR/Protobuf; fits RQ2. Full text read as XML (cited by section); PDF → to-acquire for page numbers. |
+| Dizdarević et al. — survey of IoT communication protocols | arXiv:1804.01747 | ☑ | Dizdarević, Carpio, Jukan, & Masip-Bruin (2019). A Survey of Communication Protocols for Internet of Things and Related Challenges of Fog and Cloud Computing Integration. *ACM Computing Surveys, 51*(6). DOI 10.1145/3292674 (`dizdarevic2019survey`) | ID correct. Cite the published ACM version, not the arXiv preprint (arXiv title lacks the leading "A"). **Weak fit for RQ3:** only names JSON/XML, no CBOR/Protobuf; WebSockets explicitly out of scope. Better used in Related Work. Preprint PDF downloaded (no final page numbers → cite by section). |
+| ScienceDirect survey | PII S2352864822000347 | ☑ (full text verified in Task B) | Bayılmış, Ebleme, Çavuşoğlu, Küçük, & Sevin (2022). A survey on communication protocols and performance evaluations for Internet of Things. *Digital Communications and Networks, 8*(6), 1094–1104. DOI 10.1016/j.dcan.2022.03.013 (`bayilmis2022survey`) | PII correct. Legal publisher PDF obtained from Karabük University in Task B. Own CoAP/MQTT/WebSocket experiment on WeMOS/ESP8266 and laptop measures throughput, inter-arrival delay and charge consumption; theoretical efficiency excludes layers 1–3. No CPU/RAM or serialization-format comparison; better fit for protocol Related Work. Findings: `related-work.md` F22. |
 
 ## RQ4 — Protocol overhead
-| Source (as recorded) | Identifier | Verified |
-|---|---|---|
-| Sarafov, TUM | NET-2018-03-1 (TUM Network Architectures seminar) | ☐ |
-| arXiv paper | arXiv:1409.3367 | ☐ |
-| IJRASET 2026 | DOI 10.22214/ijraset.2026.77541 | ☐ |
+| Source (as recorded) | Identifier | Verified | Resolved as (bibkey) | Notes / discrepancies |
+|---|---|---|---|---|
+| Sarafov, TUM | NET-2018-03-1 (TUM Network Architectures seminar) | ☑ | Sarafov, V. (2018). Comparison of IoT Data Protocol Overhead. In G. Carle & D. Raumer (Eds.), *Proceedings of the Seminars FI and IITM, Winter Semester 2017/2018* (NET-2018-03-1, pp. 7–14). TUM. DOI 10.2313/NET-2018-03-1_02 (`sarafov2018comparison`) | NET-2018-03-1 is the number of the whole proceedings volume; the paper's own DOI is 10.2313/NET-2018-03-1_02 (DataCite). Student seminar paper, not peer-reviewed. Covers WebSocket, CoAP, MQTT — no HTTP polling. PDF downloaded. |
+| arXiv paper | arXiv:1409.3367 | ☑ | Muller, G. L. (2014). *HTML5 WebSocket protocol and its application to distributed computing*. MSc thesis, Cranfield University. arXiv:1409.3367 (`muller2014websocket`) | ID correct. It is an MSc thesis posted on arXiv, not a peer-reviewed paper; overhead figures are second-hand and internally inconsistent. Focus is distributed computing, not IoT. PDF downloaded. |
+| IJRASET 2026 | DOI 10.22214/ijraset.2026.77541 | ☑ (exists) — **⚠ not recommended** | Mishra, M., & Guru, S. (2026). Performance Evaluation of MQTT, CoAP and HTTP Protocols for Application-Specific IoT Scenarios. *IJRASET, 14*(2), 883–890 (`mishra2026performance`) | DOI correct. Paper has unfilled simulation placeholders, inconsistent overhead units, insufficiently explained HTTP 0% delivery and an incorrect reference. Do not use as quantitative evidence. The venue's peer-review process was not independently established; historical indexing/list observations are not proof of review quality. PDF downloaded. |
 
 ## RQ1 / RQ2
-No sources recorded yet.
+No sources recorded yet. (`jaraochoa2023power` and `viswanathan2017analysis` above would fit RQ2 — decision for Felix.)
