@@ -1,0 +1,12 @@
+# Full-text PDFs: copyrighted, large — keep local only (back them up separately)
+literature/pdfs/*
+!literature/pdfs/.gitkeep
+
+# Agent run logs
+logs/
+
+# OS / editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
